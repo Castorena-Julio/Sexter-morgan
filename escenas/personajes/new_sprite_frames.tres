@@ -1,9 +1,9 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://5i30qndjs28k"]
 
-[ext_resource type="Texture2D" path="res://sprites/soldado.png" id="1_7u3vb"]
-[ext_resource type="Texture2D" path="res://sprites/sexter.png" id="1_q35u4"]
-[ext_resource type="Texture2D" path="res://sprites/estatico.png" id="2_k0ch6"]
-[ext_resource type="Texture2D" uid="uid://drsqkjbeeqtos" path="res://imagenes/berserk-removebg-preview (1).png" id="3_wdk07"]
+[ext_resource type="Texture2D" uid="uid://b2q1jdmom5bm4" path="res://sprites/soldado.png" id="1_7u3vb"]
+[ext_resource type="Texture2D" uid="uid://b0u5yq0swehir" path="res://sprites/sexter.png" id="1_q35u4"]
+[ext_resource type="Texture2D" uid="uid://bdfv4xypdkfs3" path="res://sprites/estatico.png" id="2_k0ch6"]
+[ext_resource type="Texture2D" uid="uid://drsqkjbeeqtos" path="res://sprites/berserk-removebg-preview (1).png" id="3_wdk07"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0ch6"]
 atlas = ExtResource("1_7u3vb")

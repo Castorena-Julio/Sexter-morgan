@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdfv4xypdkfs3"
-path="res://.godot/imported/estatico.png-434a13ac6512135423b716fdbc66a724.ctex"
+uid="uid://b2q1jdmom5bm4"
+path="res://.godot/imported/soldado.png-799851961dba055f9473708c313bcbab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/estatico.png"
-dest_files=["res://.godot/imported/estatico.png-434a13ac6512135423b716fdbc66a724.ctex"]
+source_file="res://sprites/soldado.png"
+dest_files=["res://.godot/imported/soldado.png-799851961dba055f9473708c313bcbab.ctex"]
 
 [params]
 

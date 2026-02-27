@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://47o35pl1b7ou"
-path="res://.godot/imported/tileset_mazmorra.png-7fd19aac22750e4ad96a09545b6fab8f.ctex"
+uid="uid://drsqkjbeeqtos"
+path="res://.godot/imported/berserk-removebg-preview (1).png-d814ab0dcd33ec8d27a09e315c5691ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/tileset_mazmorra.png"
-dest_files=["res://.godot/imported/tileset_mazmorra.png-7fd19aac22750e4ad96a09545b6fab8f.ctex"]
+source_file="res://sprites/berserk-removebg-preview (1).png"
+dest_files=["res://.godot/imported/berserk-removebg-preview (1).png-d814ab0dcd33ec8d27a09e315c5691ff.ctex"]
 
 [params]
 

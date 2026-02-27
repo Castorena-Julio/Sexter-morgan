@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0u5yq0swehir"
-path="res://.godot/imported/sexter.png-719cbb0c67faab4b59bd41a7a70fabab.ctex"
+uid="uid://bdfv4xypdkfs3"
+path="res://.godot/imported/estatico.png-ac697246e7976953660aaad09e4c37f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/sexter.png"
-dest_files=["res://.godot/imported/sexter.png-719cbb0c67faab4b59bd41a7a70fabab.ctex"]
+source_file="res://sprites/estatico.png"
+dest_files=["res://.godot/imported/estatico.png-ac697246e7976953660aaad09e4c37f9.ctex"]
 
 [params]
 
