@@ -31,7 +31,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if velocity.x !=0 || velocity.y !=0 :
-		$AnimatedSprite2D.play("correr"	)
+		$AnimatedSprite2D.play("new_animation"	)
 	else : 
 		$AnimatedSprite2D.play("estatico")
 

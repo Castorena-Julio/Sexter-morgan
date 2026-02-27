@@ -22,8 +22,8 @@ texture_filter = 1
 position = Vector2(0, 2.3841858e-07)
 scale = Vector2(0.10309279, 0.1300813)
 sprite_frames = ExtResource("1_xyhy2")
-animation = &"estatico"
-frame_progress = 0.32937303
+animation = &"new_animation"
+frame_progress = 0.26986858
 
 [node name="Area2D" type="Area2D" parent="." unique_id=745375132]
 collision_layer = 0
