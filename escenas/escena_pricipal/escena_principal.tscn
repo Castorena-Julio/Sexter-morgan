@@ -5,6 +5,8 @@
 [node name="escena_principal" type="Node2D" unique_id=557420189]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2045321553]
+position = Vector2(244, 148)
 zoom = Vector2(2.435, 2.435)
 
 [node name="nivel 1" parent="." unique_id=598051592 instance=ExtResource("1_hx4jb")]
+position = Vector2(244, 149)
