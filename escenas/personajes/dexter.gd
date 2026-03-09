@@ -1,31 +1,56 @@
 extends CharacterBody2D
 
 @export var area_2d: Area2D
-const salto : float = -50.0
-var _velocidad : float = 200
 
+const salto : float = -200.0
+var _velocidad : float = 200
+const move_speed = 200
+const dash_speed =800
+const dash_duration = 0.2
+@onready var dash = $Dash
 
 func _ready() :
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 
-var salud : float = 100
+
 
 #movimineto lateral 
 func _physics_process(delta):
-	#gravedad
-	if Input.is_action_pressed("arriba")  || Input.is_action_pressed("ui_up"):
-		velocity.y = salto
-	elif Input.is_action_pressed("abajo") || Input.is_action_pressed("ui_down"):
-		velocity.y = -salto
-	else : 
-		velocity.y = 0
 	
+	
+	
+	#funcion del dash ( salto jugador)
+	if  Input.is_action_just_pressed("shift") && dash.can_dash && !dash.is_dashing():
+		print ("hola")
+		dash.start_dash(dash_duration)
+
+	_velocidad = dash_speed if dash.is_dashing() else move_speed
+	
+	
+		
+ 
+	
+	
+	#gravedad
+	if Input.is_action_pressed("arriba") || Input.is_action_pressed("ui_up") :
+		velocity.y = -_velocidad
+		
+		
+	elif Input.is_action_pressed("abajo") || Input.is_action_pressed("ui_down"): 
+		
+		velocity.y = _velocidad
+	else : 
+		
+		velocity.y = 0
+
 	
 	if Input.is_action_pressed("derecha") || Input.is_action_pressed("ui_right"):
 		velocity.x = _velocidad
+		
 		$AnimatedSprite2D.flip_h = false
 	elif Input.is_action_pressed("izquierda") || Input.is_action_pressed("ui_left"): 
 		$AnimatedSprite2D.flip_h = true
+		
 		velocity.x = -_velocidad
 	else : 
 		
@@ -41,7 +66,7 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	salud -= 20 
+	
 	$AnimatedSprite2D.modulate = Color.RED
-	print(salud)
+	
 	

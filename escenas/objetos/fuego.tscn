@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bar80ofmlp6xu"]
+
+[ext_resource type="Texture2D" uid="uid://5a3yy0rhqj1k" path="res://imagenes/fire_animation.png" id="1_cbamo"]
+[ext_resource type="Script" uid="uid://chsn0yaud4fiu" path="res://escenas/objetos/animacion_fuego.gd" id="1_ubr04"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubr04"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 0, 42, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm0cv"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 48, 42, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46vrh"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 96, 42, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n2hc"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 144, 42, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30rs8"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 192, 42, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak2rv"]
+atlas = ExtResource("1_cbamo")
+region = Rect2(84, 240, 42, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1mm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubr04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm0cv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46vrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n2hc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30rs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak2rv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cbamo"]
+size = Vector2(21, 19.375)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubr04"]
+radius = 8.0
+height = 20.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1392488438]
+
+[node name="fuego" type="Area2D" parent="." unique_id=852324047]
+light_mask = 2
+visibility_layer = 4
+script = ExtResource("1_ubr04")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fuego" unique_id=29882655]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_v1mm8")
+animation = &"idle"
+frame_progress = 0.4910392
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fuego" unique_id=1615952858]
+top_level = true
+visibility_layer = 0
+position = Vector2(-1, 6)
+shape = SubResource("RectangleShape2D_cbamo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092826203]
+position = Vector2(-1, 7)
+shape = SubResource("CapsuleShape2D_ubr04")

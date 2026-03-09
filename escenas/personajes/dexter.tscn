@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://l7nc5oqjsc8e" path="res://escenas/personajes/dexter.gd" id="1_jqgmv"]
 [ext_resource type="SpriteFrames" uid="uid://5i30qndjs28k" path="res://escenas/personajes/new_sprite_frames.tres" id="1_xyhy2"]
+[ext_resource type="PackedScene" uid="uid://drcsekf4ipsyk" path="res://escenas/Dash.tscn" id="3_dq0jw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgmv"]
 size = Vector2(10, 10)
@@ -10,6 +11,7 @@ size = Vector2(10, 10)
 size = Vector2(10, 10)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
+position = Vector2(200, 200)
 collision_layer = 4
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
@@ -32,3 +34,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=295036826]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_dq0jw")
+
+[node name="Dash" parent="." unique_id=858014504 instance=ExtResource("3_dq0jw")]
