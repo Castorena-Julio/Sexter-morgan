@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://duoicdnf7xrm3"]
+
+[ext_resource type="Script" uid="uid://bcfoft3eklqvi" path="res://escenas/sombradashm.gd" id="2_1j4hk"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1437527396]
+script = ExtResource("2_1j4hk")

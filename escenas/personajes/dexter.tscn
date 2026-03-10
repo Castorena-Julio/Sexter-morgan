@@ -3,12 +3,17 @@
 [ext_resource type="Script" uid="uid://l7nc5oqjsc8e" path="res://escenas/personajes/dexter.gd" id="1_jqgmv"]
 [ext_resource type="SpriteFrames" uid="uid://5i30qndjs28k" path="res://escenas/personajes/new_sprite_frames.tres" id="1_xyhy2"]
 [ext_resource type="PackedScene" uid="uid://drcsekf4ipsyk" path="res://escenas/Dash.tscn" id="3_dq0jw"]
+[ext_resource type="Texture2D" uid="uid://drsqkjbeeqtos" path="res://sprites/berserk-removebg-preview (1).png" id="4_rgy7b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q35u4"]
+atlas = ExtResource("4_rgy7b")
+region = Rect2(534, 0, 178, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgmv"]
-size = Vector2(10, 10)
+size = Vector2(66, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq0jw"]
-size = Vector2(10, 10)
+size = Vector2(65, 63)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
 position = Vector2(200, 200)
@@ -16,14 +21,19 @@ collision_layer = 4
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=926322614]
+visibility_layer = 0
+texture_filter = 1
+scale = Vector2(0.42205477, 0.45049503)
+skew = -0.5462881
+texture = SubResource("AtlasTexture_q35u4")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(0, 3)
+position = Vector2(2, 0.5)
 shape = SubResource("RectangleShape2D_jqgmv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278799895]
 texture_filter = 1
-position = Vector2(0, 2.3841858e-07)
-scale = Vector2(0.10309279, 0.1300813)
 sprite_frames = ExtResource("1_xyhy2")
 animation = &"estatico"
 
@@ -32,7 +42,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=295036826]
-position = Vector2(0, 3)
+position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_dq0jw")
 
 [node name="Dash" parent="." unique_id=858014504 instance=ExtResource("3_dq0jw")]

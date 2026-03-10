@@ -1,24 +1,67 @@
 extends Node2D
 @onready var duration_timer = $DurationTimer
+@onready var duration_ghost = $GhosTimer
 
-func  start_dash(duration):
+var gosht_scene = preload("res://escenas/sombradashm.tscn")
+
+var sprite 
+
+func  start_dash(sprite, duration):
 	
 	duration_timer.wait_time = duration
+	
+	#la sombra 
+	self.sprite = sprite # tuve que crear un sprite para que esta tuviera valor( una imagen)
 	duration_timer.start()
+	duration_ghost.start()
+	instance_gosht ()
 	
 	
+func instance_gosht():
+	var ghost: Sprite2D = gosht_scene.instantiate()
+	get_parent().get_parent().add_child(ghost)
+	
+	ghost.global_position = sprite.global_position
+	ghost.texture = sprite.texture
+	ghost.vframes = sprite.vframes
+	ghost.hframes = sprite.hframes 
+	ghost.frame = sprite.frame 
+	ghost.flip_h = sprite.flip_h
+	
+	
+
+
 func is_dashing():
 	return !duration_timer.is_stopped()
 
 
+
 #con esto creamos un retardo para no hacer saltos por siepre 
-const retardo = 0.4 
+var contador = 0 
+const retardo = 1 
 var can_dash = true 
+
+
 func end_dash ():
-	can_dash = false 
-	await get_tree().create_timer(retardo).timeout
-	can_dash = true
+	duration_ghost.stop()
+	if contador == 100  :
+		print("hola")
+		can_dash = false 
+		await get_tree().create_timer(retardo).timeout
+		can_dash = true
+		print (contador)
+		contador = 0
+	else :
+		contador +=1
+		print  ("tienes otra ")
+		
 	
+
+
 
 func _on_duration_timer_timeout() -> void:
 	end_dash()
+
+
+func _on_ghos_timer_timeout() -> void:
+	instance_gosht()

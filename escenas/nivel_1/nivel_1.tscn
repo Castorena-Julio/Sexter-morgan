@@ -311,14 +311,11 @@ tile_map_data = PackedByteArray("AAAKAAEAAAACAAAAAAALAAEAAAACAAAAAAAMAAEAAQAMAA4
 tile_set = ExtResource("1_ahhdk")
 
 [node name="fuego" parent="." unique_id=852324047 instance=ExtResource("4_bfali")]
-light_mask = 1
-visibility_layer = 1
 position = Vector2(126, 54)
 scale = Vector2(1.875, 1.875)
 
 [node name="dexter" parent="." unique_id=818493870 instance=ExtResource("1_wpukg")]
 position = Vector2(121, 4)
-scale = Vector2(1.875, 1.875)
 
 [node name="Camera2D" type="Camera2D" parent="dexter" unique_id=23243441]
 position = Vector2(0, -2)
