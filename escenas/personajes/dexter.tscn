@@ -17,12 +17,14 @@ size = Vector2(65, 63)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
 position = Vector2(200, 200)
-scale = Vector2(0.265, 0.265)
+scale = Vector2(0.09, 0.09)
 collision_layer = 4
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=926322614]
+light_mask = 0
+visibility_layer = 0
 texture_filter = 1
 texture = SubResource("AtlasTexture_q35u4")
 
