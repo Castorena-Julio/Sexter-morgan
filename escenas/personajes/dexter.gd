@@ -9,6 +9,11 @@ const dash_speed =800
 const dash_duration = 0.2
 @onready var dash = $Dash
 @onready var sprite = $Sprite2D
+
+
+
+
+
 func _ready() :
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 
@@ -47,6 +52,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("derecha") || Input.is_action_pressed("ui_right"):
 		velocity.x = _velocidad
 		$Sprite2D.flip_h = false
+		
+		
 		$AnimatedSprite2D.flip_h = false
 	elif Input.is_action_pressed("izquierda") || Input.is_action_pressed("ui_left"): 
 		$AnimatedSprite2D.flip_h = true

@@ -7,7 +7,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q35u4"]
 atlas = ExtResource("4_rgy7b")
-region = Rect2(534, 0, 178, 155)
+region = Rect2(535, 13, 167, 143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgmv"]
 size = Vector2(66, 65)
@@ -17,15 +17,13 @@ size = Vector2(65, 63)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
 position = Vector2(200, 200)
+scale = Vector2(0.265, 0.265)
 collision_layer = 4
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=926322614]
-visibility_layer = 0
 texture_filter = 1
-scale = Vector2(0.42205477, 0.45049503)
-skew = -0.5462881
 texture = SubResource("AtlasTexture_q35u4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
@@ -34,6 +32,7 @@ shape = SubResource("RectangleShape2D_jqgmv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278799895]
 texture_filter = 1
+position = Vector2(5, -7)
 sprite_frames = ExtResource("1_xyhy2")
 animation = &"estatico"
 

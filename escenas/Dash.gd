@@ -7,7 +7,7 @@ var gosht_scene = preload("res://escenas/sombradashm.tscn")
 var sprite 
 
 func  start_dash(sprite, duration):
-	
+
 	duration_timer.wait_time = duration
 	
 	#la sombra 
@@ -22,12 +22,17 @@ func instance_gosht():
 	get_parent().get_parent().add_child(ghost)
 	
 	ghost.global_position = sprite.global_position
+	
+
+	
+	
 	ghost.texture = sprite.texture
+	ghost.transform = get_parent().transform #obtenemos el transform del padre y lo usa
 	ghost.vframes = sprite.vframes
 	ghost.hframes = sprite.hframes 
 	ghost.frame = sprite.frame 
 	ghost.flip_h = sprite.flip_h
-	
+	print (ghost.vframes)
 	
 
 

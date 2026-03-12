@@ -316,6 +316,7 @@ scale = Vector2(1.875, 1.875)
 
 [node name="dexter" parent="." unique_id=818493870 instance=ExtResource("1_wpukg")]
 position = Vector2(121, 4)
+scale = Vector2(1.24, 1.24)
 
 [node name="Camera2D" type="Camera2D" parent="dexter" unique_id=23243441]
 position = Vector2(0, -2)
