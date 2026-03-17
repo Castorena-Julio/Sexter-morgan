@@ -20,19 +20,15 @@ func  start_dash(sprite, duration):
 func instance_gosht():
 	var ghost: Sprite2D = gosht_scene.instantiate()
 	get_parent().get_parent().add_child(ghost)
-	
+	#se crea la sombra del principal al  moemnto de hacer el dash
 	ghost.global_position = sprite.global_position
-	
-
-	
-	
 	ghost.texture = sprite.texture
 	ghost.transform = get_parent().transform #obtenemos el transform del padre y lo usa
 	ghost.vframes = sprite.vframes
 	ghost.hframes = sprite.hframes 
 	ghost.frame = sprite.frame 
 	ghost.flip_h = sprite.flip_h
-	print (ghost.vframes)
+	
 	
 
 
@@ -49,8 +45,8 @@ var can_dash = true
 
 func end_dash ():
 	duration_ghost.stop()
-	if contador == 100  :
-		print("hola")
+	if contador == 2  :
+		
 		can_dash = false 
 		await get_tree().create_timer(retardo).timeout
 		can_dash = true
@@ -58,7 +54,7 @@ func end_dash ():
 		contador = 0
 	else :
 		contador +=1
-		print  ("tienes otra ")
+		
 		
 	
 

@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/armas/bala.gd" id="1_bala"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bala"]
+size = Vector2(8, 4)
+
+[node name="Bala" type="Area2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_bala")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.25)
+modulate = Color(1, 1, 0.6, 1)
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bala")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

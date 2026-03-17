@@ -5,7 +5,7 @@ extends CharacterBody2D
 const salto : float = -200.0
 var _velocidad : float = 200
 const move_speed = 200
-const dash_speed =800
+const dash_speed =400
 const dash_duration = 0.2
 @onready var dash = $Dash
 @onready var sprite = $Sprite2D
