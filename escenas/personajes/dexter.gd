@@ -9,14 +9,16 @@ const dash_speed =400
 const dash_duration = 0.2
 @onready var dash = $Dash
 @onready var sprite = $Sprite2D
+@onready var hud = $HUD
 
-
-
+# Variables de vida
+var vida_maxima : float = 100.0
+var vida_actual : float = 100.0
 
 
 func _ready() :
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
-
+	hud.actualizar_vida(vida_actual, vida_maxima)
 
 
 #movimineto lateral 
@@ -72,8 +74,25 @@ func _physics_process(delta):
 	
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func recibir_dano(cantidad: float) -> void:
+	vida_actual -= cantidad
+	vida_actual = max(vida_actual, 0)
+	hud.actualizar_vida(vida_actual, vida_maxima)
 	
 	$AnimatedSprite2D.modulate = Color.RED
 	
+	# Restaurar color despues de un momento
+	var tween = create_tween()
+	tween.tween_property($AnimatedSprite2D, "modulate", Color.WHITE, 0.3)
 	
+	if vida_actual <= 0:
+		morir()
+
+
+func morir() -> void:
+	# Por ahora solo imprime un mensaje, puedes agregar logica aqui
+	print("Dexter ha muerto!")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	recibir_dano(20.0)
