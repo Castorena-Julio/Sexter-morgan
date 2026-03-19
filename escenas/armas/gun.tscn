@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://o8racyynwdus"]
+
+[ext_resource type="Script" uid="uid://c8ouciwqrmq3" path="res://arma.gd" id="1_bl4v8"]
+[ext_resource type="Texture2D" uid="uid://dt01w6e368yl3" path="res://sprites/gun.png" id="2_7ow62"]
+
+[node name="arma" type="Node2D" unique_id=1605678413]
+scale = Vector2(0.21, 0.21)
+script = ExtResource("1_bl4v8")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1529961053]
+position = Vector2(942.8571, -285.7143)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=775990223]
+position = Vector2(395.2381, -109.5238)
+texture = ExtResource("2_7ow62")

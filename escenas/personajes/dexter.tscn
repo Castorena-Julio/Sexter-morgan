@@ -4,6 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://5i30qndjs28k" path="res://escenas/personajes/new_sprite_frames.tres" id="1_xyhy2"]
 [ext_resource type="PackedScene" uid="uid://drcsekf4ipsyk" path="res://escenas/Dash.tscn" id="3_dq0jw"]
 [ext_resource type="Texture2D" uid="uid://drsqkjbeeqtos" path="res://sprites/berserk-removebg-preview (1).png" id="4_rgy7b"]
+[ext_resource type="PackedScene" uid="uid://o8racyynwdus" path="res://escenas/armas/gun.tscn" id="5_p0xgg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q35u4"]
 atlas = ExtResource("4_rgy7b")
@@ -17,7 +18,6 @@ size = Vector2(65, 63)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
 position = Vector2(200, 200)
-scale = Vector2(0.09, 0.09)
 collision_layer = 4
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
@@ -47,3 +47,7 @@ position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_dq0jw")
 
 [node name="Dash" parent="." unique_id=858014504 instance=ExtResource("3_dq0jw")]
+
+[node name="arma" parent="." unique_id=1605678413 instance=ExtResource("5_p0xgg")]
+position = Vector2(39.000004, 16.000002)
+scale = Vector2(0.09, 0.09)

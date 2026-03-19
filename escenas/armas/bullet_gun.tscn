@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bt2p1of76edpo"]
+
+[ext_resource type="Texture2D" uid="uid://b4fxvoyhvkvbr" path="res://sprites/bala.png" id="1_cp0op"]
+[ext_resource type="Script" uid="uid://i4dg0uwpgc0l" path="res://escenas/armas/bullet_gun.gd" id="1_s07pd"]
+
+[node name="bullet" type="Node2D" unique_id=1384554130]
+script = ExtResource("1_s07pd")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1693060756]
+scale = Vector2(0.18, 0.18)
+rect = Rect2(-366.6667, -422.22223, 794.44446, 894.44446)
+enable_node_path = NodePath("../Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1022592344]
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("1_cp0op")
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
