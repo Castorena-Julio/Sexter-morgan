@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dfwk5o61y06x4"]
+
+[ext_resource type="Script" uid="uid://c1khxdi24uvv" path="res://escenas/personajes/enemigos/centinela2.0.tscn.gd" id="1_8onmi"]
+[ext_resource type="SpriteFrames" uid="uid://5i30qndjs28k" path="res://escenas/personajes/new_sprite_frames.tres" id="3_jjdah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxiw"]
+size = Vector2(52.174133, 69.565186)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dq0jw"]
+size = Vector2(53.282593, 78.67395)
+
+[node name="mejoras" type="CharacterBody2D" unique_id=818493870]
+position = Vector2(200, 200)
+scale = Vector2(0.115, 0.115)
+collision_layer = 5
+script = ExtResource("1_8onmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
+position = Vector2(0.00012207031, 17.391357)
+shape = SubResource("RectangleShape2D_vpxiw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278799895]
+texture_filter = 1
+position = Vector2(5, -7)
+sprite_frames = ExtResource("3_jjdah")
+animation = &"estatico"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=745375132]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=295036826]
+position = Vector2(8.141357, 12.836914)
+shape = SubResource("RectangleShape2D_dq0jw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

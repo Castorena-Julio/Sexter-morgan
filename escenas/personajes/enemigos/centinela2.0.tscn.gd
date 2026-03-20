@@ -8,15 +8,6 @@ func _physics_process(delta):
 	if player : 
 		look_at(player.global_position)
 	
-	$RayCast2D.force_raycast_update()
-
-	if $RayCast2D.is_colliding():
-		var col = $RayCast2D.get_collider()
-		
-		if col.is_in_group("player"):
-			shot()
-	else : 
-		$AnimatedSprite2D2.play("idle")
 	
 func shot ():
 	$AnimatedSprite2D2.play("disparo")
@@ -31,6 +22,6 @@ func shot ():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("playerbala"):
 		print ("le pegaste")
-		
+		#hla
 		
 		

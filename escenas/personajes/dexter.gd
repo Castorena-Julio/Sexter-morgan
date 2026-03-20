@@ -72,7 +72,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("estatico")
 
 
-
+#recibir dano
 func recibir_dano(cantidad: float) -> void:
 	vida_actual -= cantidad
 	vida_actual = max(vida_actual, 0)
@@ -89,9 +89,14 @@ func recibir_dano(cantidad: float) -> void:
 
 
 func morir() -> void:
-	# Por ahora solo imprime un mensaje, puedes agregar logica aqui
+	
 	print("Dexter ha muerto!")
 
-
+#no me dejo borrar esta funcion y solo le puse pass
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print ("hola")
 	recibir_dano(20.0)

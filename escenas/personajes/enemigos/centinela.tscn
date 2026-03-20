@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b0ipab1l08daj"]
 
 [ext_resource type="Script" uid="uid://dm0ekflf7gykn" path="res://escenas/personajes/enemigos/centinela.gd" id="1_uqrns"]
+[ext_resource type="Texture2D" uid="uid://d1fwbacfqw5py" path="res://sprites/disparo_ar.png" id="3_t564i"]
 [ext_resource type="Texture2D" uid="uid://bty3s2ckn4yi1" path="res://sprites/arquero-removebg-preview.png" id="4_uhmyy"]
-[ext_resource type="PackedScene" uid="uid://o8racyynwdus" path="res://escenas/armas/gun.tscn" id="5_ltqqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgmv"]
-size = Vector2(66, 65)
+size = Vector2(25, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otu1t"]
 atlas = ExtResource("4_uhmyy")
@@ -22,6 +22,26 @@ region = Rect2(132, 0, 66, 54)
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0k73"]
 atlas = ExtResource("4_uhmyy")
 region = Rect2(198, 2, 66, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqrns"]
+atlas = ExtResource("3_t564i")
+region = Rect2(0, 0, 59, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhmyy"]
+atlas = ExtResource("3_t564i")
+region = Rect2(64, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltqqb"]
+atlas = ExtResource("3_t564i")
+region = Rect2(123, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sxdd"]
+atlas = ExtResource("3_t564i")
+region = Rect2(182, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aktvi"]
+atlas = ExtResource("3_t564i")
+region = Rect2(238, 0, 59, 56)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ltqqb"]
 animations = [{
@@ -41,7 +61,39 @@ animations = [{
 "loop": true,
 "name": &"correr",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqrns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhmyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltqqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sxdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aktvi")
+}],
+"loop": true,
+"name": &"disparo",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otu1t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yledh"]
+radius = 18.0
+height = 40.0
 
 [node name="centinela" type="CharacterBody2D" unique_id=818493870]
 position = Vector2(200, 200)
@@ -49,19 +101,24 @@ collision_layer = 4
 script = ExtResource("1_uqrns")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(2, 0.5)
+position = Vector2(-3.5, 3.5)
 shape = SubResource("RectangleShape2D_jqgmv")
-
-[node name="arma" parent="." unique_id=1605678413 instance=ExtResource("5_ltqqb")]
-visible = false
-position = Vector2(39.000004, 16.000002)
-scale = Vector2(0.09, 0.09)
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=980486503]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ltqqb")
-animation = &"correr"
-frame_progress = 0.9826093
+animation = &"disparo"
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1365690141]
 target_position = Vector2(200, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1415845391]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1129846459]
+position = Vector2(2, 5)
+shape = SubResource("CapsuleShape2D_yledh")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=688460585]
+position = Vector2(29, 3)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

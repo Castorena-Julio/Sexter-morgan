@@ -18,5 +18,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("disparo ") :
 		var bullet_instan = bullet.instantiate () 
 		get_tree().root.add_child(bullet_instan)
+		bullet_instan.add_to_group("playerbala")
 		bullet_instan.global_position = marcador.global_position # guarda la posicion y ejecuta  la bala ahi
 		bullet_instan.rotation = rotation

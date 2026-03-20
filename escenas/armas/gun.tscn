@@ -8,7 +8,7 @@ scale = Vector2(0.21, 0.21)
 script = ExtResource("1_bl4v8")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1529961053]
-position = Vector2(942.8571, -285.7143)
+position = Vector2(1071.4286, -280.9524)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=775990223]
