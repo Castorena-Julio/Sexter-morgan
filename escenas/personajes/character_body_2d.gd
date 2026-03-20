@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var bullet = preload("res://escenas/personajes/bullet.tscn")
+
 const salto : float = -50.0
 var _velocidad : float = 200.0
 
@@ -26,11 +26,5 @@ func  _physics_process(delta):
 	
 	
 	look_at(get_global_mouse_position())
-	if Input.is_action_just_pressed("ui_accept"):
-		shoot()
+	
 		
-func shoot():
-	var newBullet = bullet.instantiate()
-	newBullet.direction=rotation
-	newBullet.global_position =$spawnpoint.global_position
-	get_parent().add_child(newBullet)

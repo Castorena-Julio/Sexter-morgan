@@ -17,9 +17,9 @@ size = Vector2(66, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq0jw"]
 size = Vector2(65, 63)
 
-[node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d")]
+[node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d") groups=["player"]]
 position = Vector2(200, 200)
-collision_layer = 4
+collision_layer = 5
 script = ExtResource("1_jqgmv")
 area_2d = NodePath("Area2D")
 
@@ -29,7 +29,7 @@ visibility_layer = 0
 texture_filter = 1
 texture = SubResource("AtlasTexture_q35u4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789 groups=["player"]]
 position = Vector2(2, 0.5)
 shape = SubResource("RectangleShape2D_jqgmv")
 
@@ -53,4 +53,4 @@ shape = SubResource("RectangleShape2D_dq0jw")
 position = Vector2(39.000004, 16.000002)
 scale = Vector2(0.09, 0.09)
 
-[node name="HUD" parent="." instance=ExtResource("6_hud")]
+[node name="HUD" parent="." unique_id=138920949 instance=ExtResource("6_hud")]

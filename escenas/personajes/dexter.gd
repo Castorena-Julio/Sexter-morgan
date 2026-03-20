@@ -71,7 +71,6 @@ func _physics_process(delta):
 	else : 
 		$AnimatedSprite2D.play("estatico")
 
-	
 
 
 func recibir_dano(cantidad: float) -> void:
