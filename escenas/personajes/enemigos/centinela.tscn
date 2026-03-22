@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bty3s2ckn4yi1" path="res://sprites/arquero-removebg-preview.png" id="4_uhmyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqgmv"]
-size = Vector2(25, 41)
+size = Vector2(35, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otu1t"]
 atlas = ExtResource("4_uhmyy")
@@ -92,7 +92,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yledh"]
-radius = 18.0
+radius = 3.0
 height = 40.0
 
 [node name="centinela" type="CharacterBody2D" unique_id=818493870]
@@ -101,10 +101,11 @@ collision_layer = 4
 script = ExtResource("1_uqrns")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(-3.5, 3.5)
+position = Vector2(-0.5, 3.5)
 shape = SubResource("RectangleShape2D_jqgmv")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=980486503]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ltqqb")
 animation = &"disparo"

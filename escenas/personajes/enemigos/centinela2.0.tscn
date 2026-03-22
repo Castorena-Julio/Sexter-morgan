@@ -1,13 +1,99 @@
 [gd_scene format=3 uid="uid://dfwk5o61y06x4"]
 
 [ext_resource type="Script" uid="uid://c1khxdi24uvv" path="res://escenas/personajes/enemigos/centinela2.0.tscn.gd" id="1_8onmi"]
-[ext_resource type="SpriteFrames" uid="uid://5i30qndjs28k" path="res://escenas/personajes/new_sprite_frames.tres" id="3_jjdah"]
+[ext_resource type="Texture2D" uid="uid://bty3s2ckn4yi1" path="res://sprites/arquero-removebg-preview.png" id="2_4j08n"]
+[ext_resource type="Texture2D" uid="uid://d1fwbacfqw5py" path="res://sprites/disparo_ar.png" id="3_2dpn6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otu1t"]
+atlas = ExtResource("2_4j08n")
+region = Rect2(0, 0, 65, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si3xv"]
+atlas = ExtResource("2_4j08n")
+region = Rect2(66, 0, 66, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnjm4"]
+atlas = ExtResource("2_4j08n")
+region = Rect2(132, 0, 66, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0k73"]
+atlas = ExtResource("2_4j08n")
+region = Rect2(198, 2, 66, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqrns"]
+atlas = ExtResource("3_2dpn6")
+region = Rect2(0, 0, 59, 57)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhmyy"]
+atlas = ExtResource("3_2dpn6")
+region = Rect2(64, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltqqb"]
+atlas = ExtResource("3_2dpn6")
+region = Rect2(123, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sxdd"]
+atlas = ExtResource("3_2dpn6")
+region = Rect2(182, 0, 59, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aktvi"]
+atlas = ExtResource("3_2dpn6")
+region = Rect2(238, 0, 59, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7r344"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otu1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si3xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnjm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0k73")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqrns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhmyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltqqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sxdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aktvi")
+}],
+"loop": true,
+"name": &"disparo",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otu1t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxiw"]
-size = Vector2(52.174133, 69.565186)
+size = Vector2(34.782623, 43.47827)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dq0jw"]
-size = Vector2(53.282593, 78.67395)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4j08n"]
+radius = 18.0
+height = 40.0
 
 [node name="mejoras" type="CharacterBody2D" unique_id=818493870]
 position = Vector2(200, 200)
@@ -15,21 +101,32 @@ scale = Vector2(0.115, 0.115)
 collision_layer = 5
 script = ExtResource("1_8onmi")
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=186269290]
+texture_filter = 1
+position = Vector2(-1.7065394, 0)
+scale = Vector2(0.9421512, 1)
+sprite_frames = SubResource("SpriteFrames_7r344")
+animation = &"disparo"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(0.00012207031, 17.391357)
+position = Vector2(-8.695679, 4.3480225)
 shape = SubResource("RectangleShape2D_vpxiw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278799895]
-texture_filter = 1
-position = Vector2(5, -7)
-sprite_frames = ExtResource("3_jjdah")
-animation = &"estatico"
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=177796977]
+target_position = Vector2(200, 0)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=745375132]
-collision_mask = 3
+[node name="Marker2D" type="Marker2D" parent="." unique_id=633818964]
+position = Vector2(29, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=295036826]
-position = Vector2(8.141357, 12.836914)
-shape = SubResource("RectangleShape2D_dq0jw")
+[node name="Area2D" type="Area2D" parent="." unique_id=285395498]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1717772761]
+position = Vector2(2, 5)
+shape = SubResource("CapsuleShape2D_4j08n")
+
+[node name="Timer" type="Timer" parent="." unique_id=1148879428]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
