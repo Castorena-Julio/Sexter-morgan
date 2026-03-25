@@ -86,7 +86,7 @@ size = Vector2(55, 104)
 size = Vector2(63, 112)
 
 [node name="camianate" type="CharacterBody2D" unique_id=129427515]
-scale = Vector2(0.66, 0.66)
+scale = Vector2(0.195, 0.195)
 script = ExtResource("1_ifdef")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=812187335]

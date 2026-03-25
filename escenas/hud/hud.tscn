@@ -8,8 +8,8 @@ script = ExtResource("1_hud")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 0
-offset_right = 200.0
-offset_bottom = 50.0
+offset_right = 220.0
+offset_bottom = 80.0
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
@@ -29,3 +29,7 @@ custom_minimum_size = Vector2(150, 16)
 max_value = 100.0
 value = 100.0
 show_percentage = false
+
+[node name="LabelEnemigos" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "☠ Eliminados: 0"

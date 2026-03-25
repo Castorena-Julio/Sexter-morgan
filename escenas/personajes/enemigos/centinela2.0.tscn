@@ -96,8 +96,7 @@ radius = 18.0
 height = 40.0
 
 [node name="mejoras" type="CharacterBody2D" unique_id=818493870]
-position = Vector2(200, 200)
-scale = Vector2(0.115, 0.115)
+scale = Vector2(0.58, 0.58)
 collision_layer = 5
 script = ExtResource("1_8onmi")
 
@@ -113,7 +112,7 @@ position = Vector2(-8.695679, 4.3480225)
 shape = SubResource("RectangleShape2D_vpxiw")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=177796977]
-target_position = Vector2(200, 0)
+target_position = Vector2(500, 0)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=633818964]
 position = Vector2(29, 3)

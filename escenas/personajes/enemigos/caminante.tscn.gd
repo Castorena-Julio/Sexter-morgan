@@ -28,7 +28,6 @@ func recibir_dano(cantidad: float) -> void:
 	vida_actual -= cantidad
 	vida_actual = max(vida_actual, 0)
 	
-	print (vida_actual)
 	$AnimatedSprite2D.modulate = Color.RED
 	
 	# Restaurar color despues de un momento
@@ -40,11 +39,10 @@ func recibir_dano(cantidad: float) -> void:
 		
 		
 func morir() -> void:
-	print ("murio")
+	GameManager.registrar_muerte()
 	queue_free()
 	
 	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("playerbala"):
-		recibir_dano(10.0)
-		print ("10")
+		recibir_dano(50.0)

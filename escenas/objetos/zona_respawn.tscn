@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/objetos/zona_respawn.gd" id="1_zona"]
+
+[node name="ZonaRespawn" type="Node2D"]
+script = ExtResource("1_zona")
