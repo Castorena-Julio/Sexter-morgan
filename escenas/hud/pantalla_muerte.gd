@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var label_kills: Label
-
+@onready var muerteaudio = $muerte
 func _ready() -> void:
 	layer = 25
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -10,6 +10,8 @@ func _ready() -> void:
 
 func mostrar_muerte() -> void:
 	# Actualizar contador antes de mostrar
+	muerteaudio.play()
+	get_tree().paused = true
 	if label_kills:
 		label_kills.text = "Enemigos eliminados: %d" % GameManager.enemigos_muertos
 	visible = true
@@ -73,10 +75,12 @@ func _construir_ui() -> void:
 
 func _reiniciar() -> void:
 	visible = false
+	get_tree().paused = false
 	GameManager.enemigos_muertos = 0
 	get_tree().reload_current_scene()
 
 func _ir_al_menu() -> void:
 	visible = false
+	get_tree().paused = false
 	GameManager.enemigos_muertos = 0
 	get_tree().change_scene_to_file("res://menu.tscn")

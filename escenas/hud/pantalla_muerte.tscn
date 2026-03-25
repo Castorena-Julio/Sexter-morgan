@@ -1,6 +1,11 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://b5v3wefldu5u1"]
 
-[ext_resource type="Script" path="res://escenas/hud/pantalla_muerte.gd" id="1_muerte"]
+[ext_resource type="Script" uid="uid://bqmronomrkets" path="res://escenas/hud/pantalla_muerte.gd" id="1_muerte"]
+[ext_resource type="AudioStream" uid="uid://n81yce0lwy27" path="res://musica/muerte.mp3" id="2_uxc58"]
 
-[node name="PantallaMuerte" type="CanvasLayer"]
+[node name="PantallaMuerte" type="CanvasLayer" unique_id=1036453284]
 script = ExtResource("1_muerte")
+
+[node name="muerte" type="AudioStreamPlayer2D" parent="." unique_id=1844433054]
+stream = ExtResource("2_uxc58")
+volume_db = 5.958
