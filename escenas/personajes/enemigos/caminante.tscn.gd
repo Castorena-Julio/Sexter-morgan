@@ -15,7 +15,7 @@ func _physics_process(data):
 		$AnimatedSprite2D.flip_h = true
 	else :
 		$AnimatedSprite2D.flip_h = false
-	if distancia < 200:
+	if distancia < 300:
 		$AnimatedSprite2D.play("correr")
 		velocity = direccion * speed
 	if velocity.y == 0 && velocity.x == 0 :

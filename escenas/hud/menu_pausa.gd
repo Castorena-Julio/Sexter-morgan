@@ -4,11 +4,12 @@ var visible_menu: bool = false
 
 func _ready() -> void:
 	layer = 20
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_construir_ui()
 	visible = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("pausa"):
 		if visible_menu:
 			reanudar()
 		else:

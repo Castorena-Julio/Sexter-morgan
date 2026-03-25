@@ -4,6 +4,7 @@ var label_kills: Label
 
 func _ready() -> void:
 	layer = 25
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	_construir_ui()
 	visible = false
 

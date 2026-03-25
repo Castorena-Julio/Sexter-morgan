@@ -1,16 +1,15 @@
 extends Node
 
-# --- Contador de enemigos ---
+
 var enemigos_muertos: int = 0
 
-# --- Fibonacci para oleadas ---
-var fib_a: int = 1  # oleada actual (numero a spawnear)
-var fib_b: int = 1  # siguiente oleada
+var fib_a: int = 1 
+var fib_b: int = 1  
 
-# --- Señal que emiten los enemigos al morir ---
+
 signal enemigo_muerto
 
-# --- Referencia al HUD (se asigna desde dexter.gd o nivel_1) ---
+
 var hud = null
 
 func _ready() -> void:
