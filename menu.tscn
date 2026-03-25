@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://3j4hh028v6e6"]
+
+[ext_resource type="Texture2D" uid="uid://66vvr0fgkjtv" path="res://imagenes/pantalla.png" id="1_lti8b"]
+
+[node name="menu" type="Control" unique_id=767441269]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=279919061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27022174, 0.27022198, 0.27022186, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=246587267]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lti8b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=275969375]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -133.5
+offset_right = 151.0
+offset_bottom = 133.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=340954923]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Jugar "
+
+[node name="opcion" type="Button" parent="VBoxContainer" unique_id=892520609]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Jugar "
+
+[node name="salir" type="Button" parent="VBoxContainer" unique_id=182404582]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Jugar "
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1987130022]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.5
+offset_right = 26.5
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = -9
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=1398263843]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=197230445]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.69411767, 0.17254902, 0.10980392, 0.9529412)
+theme_override_font_sizes/font_size = 150
+text = "Sexter "
+horizontal_alignment = 1

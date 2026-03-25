@@ -12,13 +12,12 @@ atlas = ExtResource("4_rgy7b")
 region = Rect2(535, 13, 167, 143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxiw"]
-size = Vector2(52.174133, 69.565186)
+size = Vector2(52.174023, 52.173897)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq0jw"]
-size = Vector2(53.282593, 78.67395)
+size = Vector2(44.0326, 43.478256)
 
 [node name="dexter" type="CharacterBody2D" unique_id=818493870 node_paths=PackedStringArray("area_2d") groups=["player"]]
-position = Vector2(200, 200)
 scale = Vector2(0.115, 0.115)
 collision_layer = 5
 script = ExtResource("1_jqgmv")
@@ -31,28 +30,30 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_q35u4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(0.00012207031, 17.391357)
+position = Vector2(5.531311e-05, 8.695644)
 shape = SubResource("RectangleShape2D_vpxiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278799895]
 texture_filter = 1
-position = Vector2(5, -7)
+position = Vector2(1.1444092e-05, 0)
+scale = Vector2(0.126, 0.143)
 sprite_frames = ExtResource("1_xyhy2")
-animation = &"estatico"
+animation = &"new_animation"
+frame_progress = 0.7437086
 
 [node name="Area2D" type="Area2D" parent="." unique_id=745375132]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=295036826]
-position = Vector2(8.141357, 12.836914)
+position = Vector2(4.624996, 4.347826)
 shape = SubResource("RectangleShape2D_dq0jw")
 
 [node name="Dash" parent="." unique_id=858014504 instance=ExtResource("3_dq0jw")]
 
 [node name="arma" parent="." unique_id=1605678413 instance=ExtResource("5_p0xgg")]
-position = Vector2(17.391304, 8.695686)
-rotation = -0.4537856
-scale = Vector2(0.09, 0.09)
+position = Vector2(17.391304, 17.391304)
+rotation = -2.2008603
+scale = Vector2(0.065, 0.065)
 
 [node name="HUD" parent="." unique_id=138920949 instance=ExtResource("6_hud")]
 

@@ -8,14 +8,13 @@ var vida_actual : float = 100.0
 @onready var marcador: Marker2D = $Marker2D
 
 var can_shoot = true
-var contador = 0 
-const retardo = 1 
 
 
 
 
 func _physics_process(delta):
 	if player : 
+		
 		look_at(player.global_position)
 	
 	#se gira pasando los angulos de 90 y 270

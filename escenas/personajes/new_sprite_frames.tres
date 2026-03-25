@@ -1,6 +1,9 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://5i30qndjs28k"]
 
-[ext_resource type="Texture2D" uid="uid://drsqkjbeeqtos" path="res://sprites/berserk-removebg-preview (1).png" id="1_q35u4"]
+[ext_resource type="Texture2D" uid="uid://b616b840ydcub" path="res://sprites/dextersanti/dexter fr1.png" id="1_wdk07"]
+[ext_resource type="Texture2D" uid="uid://b6nwcmjhrqnmi" path="res://sprites/dextersanti/dexter fr2 1.png" id="2_40b20"]
+[ext_resource type="Texture2D" uid="uid://ck0o7tnuasaq5" path="res://sprites/dextersanti/dexter fr4.png" id="3_wetbr"]
+[ext_resource type="Texture2D" uid="uid://cn44tsa16lsp0" path="res://sprites/dextersanti/dexter fr5.png" id="4_t3ajn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k0ch6"]
 region = Rect2(0, 0, 93, 123)
@@ -26,28 +29,21 @@ region = Rect2(583, 0, 108, 123)
 [sub_resource type="AtlasTexture" id="AtlasTexture_aragu"]
 region = Rect2(693, 0, 115, 123)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q35u4"]
-atlas = ExtResource("1_q35u4")
-region = Rect2(534, 0, 178, 155)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhdjd"]
-atlas = ExtResource("1_q35u4")
-region = Rect2(0, 7, 178, 157)
+atlas = ExtResource("1_wdk07")
+region = Rect2(0, 0, 640, 640)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06hov"]
-atlas = ExtResource("1_q35u4")
-region = Rect2(178, 7, 178, 157)
+atlas = ExtResource("2_40b20")
+region = Rect2(0, 0, 640, 640)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_daxe8"]
-atlas = ExtResource("1_q35u4")
-region = Rect2(356, 7, 178, 157)
+atlas = ExtResource("3_wetbr")
+region = Rect2(0, 0, 640, 640)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oshag"]
-atlas = ExtResource("1_q35u4")
-region = Rect2(534, 7, 178, 157)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_40b20"]
-region = Rect2(91, 483, 289, 483)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e7lu"]
+atlas = ExtResource("4_t3ajn")
+region = Rect2(0, 0, 640, 640)
 
 [resource]
 animations = [{
@@ -82,7 +78,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q35u4")
+"texture": SubResource("AtlasTexture_nhdjd")
 }],
 "loop": true,
 "name": &"estatico",
@@ -90,25 +86,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nhdjd")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_06hov")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_daxe8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oshag")
+"texture": SubResource("AtlasTexture_6e7lu")
 }],
 "loop": true,
 "name": &"new_animation",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_40b20")
-}],
+"frames": [],
 "loop": true,
 "name": &"saltar",
 "speed": 20.0
