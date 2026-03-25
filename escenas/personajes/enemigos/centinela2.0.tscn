@@ -89,11 +89,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpxiw"]
-size = Vector2(34.782623, 43.47827)
+size = Vector2(20.764599, 43.47827)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4j08n"]
-radius = 18.0
-height = 40.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j08n"]
+size = Vector2(24.137924, 46.551723)
 
 [node name="mejoras" type="CharacterBody2D" unique_id=818493870]
 scale = Vector2(0.58, 0.58)
@@ -108,7 +107,8 @@ sprite_frames = SubResource("SpriteFrames_7r344")
 animation = &"disparo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1412457789]
-position = Vector2(-8.695679, 4.3480225)
+position = Vector2(-1.6866672, 4.3480234)
+scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_vpxiw")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=177796977]
@@ -120,8 +120,9 @@ position = Vector2(29, 3)
 [node name="Area2D" type="Area2D" parent="." unique_id=285395498]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1717772761]
-position = Vector2(2, 5)
-shape = SubResource("CapsuleShape2D_4j08n")
+position = Vector2(-1.724138, 4.310342)
+scale = Vector2(1.0000004, 1.0000004)
+shape = SubResource("RectangleShape2D_4j08n")
 
 [node name="Timer" type="Timer" parent="." unique_id=1148879428]
 wait_time = 0.5
