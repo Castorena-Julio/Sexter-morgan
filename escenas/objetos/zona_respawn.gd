@@ -13,8 +13,8 @@ const CAMINANTE = preload("res://escenas/personajes/enemigos/caminante.tscn")
 const CENTINELA = preload("res://escenas/personajes/enemigos/centinela2.0.tscn")
 
 var kills_acumulados: int = 0   # kills desde el último spawn
-const KILLS_PARA_SPAWN: int = 5 # cuántos kills activan el respawn
-var CANTIDAD_SPAWN:   int = 7 # cuántos enemigos aparecen
+const KILLS_PARA_SPAWN: int = 4 # cuántos kills activan el respawn
+var CANTIDAD_SPAWN:   int = 2 # cuántos enemigos aparecen
 
 
 func _ready() -> void:

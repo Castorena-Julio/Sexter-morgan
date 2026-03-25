@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" path="res://escenas/objetos/zona_respawn.tscn" id="9_zona"]
 [ext_resource type="PackedScene" path="res://escenas/hud/menu_pausa.tscn" id="10_pausa"]
 [ext_resource type="PackedScene" path="res://escenas/hud/pantalla_muerte.tscn" id="11_muerte"]
-[ext_resource type="PackedScene" path="res://escenas/hud/tutorial_controles.tscn" id="13_tutorial"]
 [ext_resource type="AudioStream" uid="uid://b0holsucd58ex" path="res://musica/doom.mp3" id="12_vptwb"]
+[ext_resource type="PackedScene" path="res://escenas/hud/tutorial_controles.tscn" id="13_tutorial"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dn0x7"]
 texture = ExtResource("1_bfali")
@@ -1197,12 +1197,12 @@ scale = Vector2(0.345, 0.345)
 position = Vector2(235, 226)
 scale = Vector2(0.45, 0.45)
 
-[node name="CharacterBody2D2" parent="." unique_id=1392488438 instance=ExtResource("4_bfali")]
-position = Vector2(631, 154)
-
 [node name="camianate2" parent="." unique_id=535439244 instance=ExtResource("8_xb1b2")]
 position = Vector2(20, 167)
 scale = Vector2(0.345, 0.345)
+
+[node name="d" parent="." unique_id=1392488438 instance=ExtResource("4_bfali")]
+position = Vector2(631, 154)
 
 [node name="camianate3" parent="." unique_id=389887775 instance=ExtResource("8_xb1b2")]
 position = Vector2(82, -71)
@@ -1223,4 +1223,4 @@ stream = ExtResource("12_vptwb")
 volume_db = 2.686
 autoplay = true
 
-[node name="TutorialControles" parent="." instance=ExtResource("13_tutorial")]
+[node name="TutorialControles" parent="." unique_id=1596209855 instance=ExtResource("13_tutorial")]
