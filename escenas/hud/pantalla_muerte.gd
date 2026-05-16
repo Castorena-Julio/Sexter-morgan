@@ -66,7 +66,7 @@ func _construir_ui() -> void:
 	btn_reiniciar.pressed.connect(_reiniciar)
 	vbox.add_child(btn_reiniciar)
 
-	# Btn Menu principal
+	# Btn Menu principalaaaad
 	var btn_menu = Button.new()
 	btn_menu.text = "🏠  Menú principal"
 	btn_menu.add_theme_font_size_override("font_size", 22)
